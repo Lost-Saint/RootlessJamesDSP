@@ -52,6 +52,7 @@ android {
         }
         getByName("release") {
             manifestPlaceholders += mapOf("crashlyticsCollectionEnabled" to "true")
+            manifestPlaceholders += mapOf("crashlyticsCollectionEnabled" to "true")
             configure<CrashlyticsExtension> {
                 nativeSymbolUploadEnabled = true
                 mappingFileUploadEnabled = false
