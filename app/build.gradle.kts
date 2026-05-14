@@ -8,7 +8,7 @@ plugins {
     id("com.google.firebase.crashlytics")
     id("com.google.devtools.ksp") version AndroidConfig.kspVersion
     id("dev.rikka.tools.refine") version AndroidConfig.rikkaRefineVersion
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.0"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.21"
 }
 
 android {
@@ -180,7 +180,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.20")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
 
     // AndroidX
     implementation("androidx.core:core-ktx:1.15.0")
@@ -224,10 +224,10 @@ dependencies {
     implementation("com.squareup.okio:okio:3.6.0")
 
     // Room databases
-    val roomVersion = "2.6.1"
+    val roomVersion = "2.7.0"
     implementation("androidx.room:room-runtime:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
-    implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("androidx.room:room-ktx:${roomVersion}")
 
     // Script editor
     implementation(project(":codeview"))
@@ -249,16 +249,16 @@ dependencies {
     implementation(project(":hidden-api-impl"))
 
     // Debug utilities
-    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.10")
-    debugImplementation("com.plutolib:pluto:2.0.9")
-    "previewImplementation"("com.plutolib:pluto-no-op:2.0.9")
-    releaseImplementation("com.plutolib:pluto-no-op:2.0.9")
-    debugImplementation("com.plutolib.plugins:bundle-core:2.0.9")
-    "previewImplementation"("com.plutolib.plugins:bundle-core-no-op:2.0.9")
-    releaseImplementation("com.plutolib.plugins:bundle-core-no-op:2.0.9")
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
+    debugImplementation("com.plutolib:pluto:2.1.5")
+    "previewImplementation"("com.plutolib:pluto-no-op:2.1.5")
+    releaseImplementation("com.plutolib:pluto-no-op:2.1.5")
+    debugImplementation("com.plutolib.plugins:bundle-core:2.1.5")
+    "previewImplementation"("com.plutolib.plugins:bundle-core-no-op:2.1.5")
+    releaseImplementation("com.plutolib.plugins:bundle-core-no-op:2.1.5")
 
     // Unit tests
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    androidTestImplementation("androidx.test.ext:junit:1.3.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
 }

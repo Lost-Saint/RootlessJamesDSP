@@ -63,6 +63,7 @@ class AutoEqClient(val context: Context, callTimeout: Long = 10, customBaseUrl: 
                 }
             }
 
+
             override fun onFailure(call: Call<Array<AeqSearchResult>>, t: Throwable) {
                 Timber.e("queryProfiles: $t")
                 onFailure?.invoke(context.getString(R.string.geq_api_network_error, t.localizedMessage))
