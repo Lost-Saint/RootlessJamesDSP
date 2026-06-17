@@ -27,7 +27,7 @@ jobs:
         image_size: 64
         min_words_contributed: 1
         include_languages: false
-        crowdin_project_link: https://crowdin.com/project/rootlessjamesdsp
+        crowdin_project_link: https://crowdin.com/project/siphondsp
       env:
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}

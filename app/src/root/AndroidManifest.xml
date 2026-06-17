@@ -9,7 +9,7 @@
     <application
         tools:node="merge">
         <service
-            android:name="me.timschneeberger.rootlessjamesdsp.flavor.updates.SessionInstallerService"
+            android:name="app.siphondsp.flavor.updates.SessionInstallerService"
             android:exported="false" />
     </application>
 </manifest>

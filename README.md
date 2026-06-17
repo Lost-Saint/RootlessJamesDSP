@@ -1,22 +1,22 @@
 <h1 align="center">
-  <img alt="Icon" width="75" src="https://github.com/thepbone/RootlessJamesDSP/blob/master/img/icons/web/icon-192.png?raw=true">
+  <img alt="Icon" width="75" src="https://github.com/thepbone/SiphonDSP/blob/master/img/icons/web/icon-192.png?raw=true">
   <br>
-  RootlessJamesDSP
+  SiphonDSP
   <br>
 </h1>
-<h4 align="center">System-wide JamesDSP implementation for non-rooted Android devices</h4>
+<h4 align="center">System-wide audio processing for non-rooted Android devices</h4>
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=me.timschneeberger.rootlessjamesdsp&utm_source=github&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-  	<img alt="Google play release" src="https://img.shields.io/github/v/release/ThePBone/RootlessJamesDSP?label=google%20play">
+  <a href="https://play.google.com/store/apps/details?id=app.siphondsp&utm_source=github&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+  	<img alt="Google play release" src="https://img.shields.io/github/v/release/ThePBone/SiphonDSP?label=google%20play">
   </a>
-  <a href="https://f-droid.org/packages/me.timschneeberger.rootlessjamesdsp/">
-  	<img alt="F-Droid release" src="https://img.shields.io/f-droid/v/me.timschneeberger.rootlessjamesdsp">
+  <a href="https://f-droid.org/packages/app.siphondsp/">
+  	<img alt="F-Droid release" src="https://img.shields.io/f-droid/v/app.siphondsp">
   </a>
-  <a href="https://github.com/ThePBone/RootlessJamesDSP/blob/master/LICENSE">
-      <img alt="License" src="https://img.shields.io/github/license/ThePBone/RootlessJamesDSP">
+  <a href="https://github.com/ThePBone/SiphonDSP/blob/master/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/ThePBone/SiphonDSP">
   </a>
-    <a href="https://github.com/ThePBone/RootlessJamesDSP/actions/workflows/build.yml">
-      <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/thepbone/rootlessjamesdsp/build.yml">
+    <a href="https://github.com/ThePBone/SiphonDSP/actions/workflows/build.yml">
+      <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/thepbone/siphondsp/build.yml">
   </a>
 
 </p>
@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-  <a href='https://play.google.com/store/apps/details?id=me.timschneeberger.rootlessjamesdsp&utm_source=github&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'> 
+  <a href='https://play.google.com/store/apps/details?id=app.siphondsp&utm_source=github&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'> 
     <img width="300" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
   </a>
 </p>
@@ -94,7 +94,7 @@ The setup is very easy:
 2. Install the unpatched Spotify app
 3. Open ReVanced Manager, select Spotify and enable the `Remove screen capture restriction` patch.
 4. Start the patching process and install the patched APK once it is done.
-5. You can now use Spotify with RootlessJamesDSP.
+5. You can now use Spotify with SiphonDSP.
 
 ### Patching other unsupported apps
 
@@ -117,31 +117,31 @@ Android has several default audio effects built into its operating system that t
 
 Being restricted to these default built-in audio effects is problematic if you want to implement any advanced custom effects such as Viper or JDSP, because Android does not allow apps to access & modify the audio stream directly.
 
-To work around this problem, RootlessJamesDSP uses a bunch of tricks to gain full access to the audio stream of other apps. This is done via Android's internal audio capture.
-This allows RootlessJamesDSP to apply its custom audio effects directly without relying on Android's built-in effects.
+To work around this problem, SiphonDSP uses a bunch of tricks to gain full access to the audio stream of other apps. This is done via Android's internal audio capture.
+This allows SiphonDSP to apply its custom audio effects directly without relying on Android's built-in effects.
 
 Unfortunately, these tricks are not 100% reliable and introduce some limitations.
-Apps such as Spotify block internal audio capture (they don't want people to record their songs), and because of that, RootlessJamesDSP cannot directly access the audio stream of that app.
+Apps such as Spotify block internal audio capture (they don't want people to record their songs), and because of that, SiphonDSP cannot directly access the audio stream of that app.
 This is the reason why a special patch is required to disable this DRM restriction inside Spotify's app. Patches for other apps with these DRM restrictions do not exist, but are possible to do.
 
 ## Translations
 
-This application can be translated via Crowdin: https://crowdin.com/project/rootlessjamesdsp
+This application can be translated via Crowdin: https://crowdin.com/project/siphondsp
 
 Not all languages are enabled at the moment in Crowdin. To request a new language, please open an issue here on GitHub.
 
 ## Downloads
 
-This app is available for free on Google Play: [https://play.google.com/store/apps/details?id=me.timschneeberger.rootlessjamesdsp](https://play.google.com/store/apps/details?id=me.timschneeberger.rootlessjamesdsp&utm_source=github&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+This app is available for free on Google Play: [https://play.google.com/store/apps/details?id=app.siphondsp](https://play.google.com/store/apps/details?id=app.siphondsp&utm_source=github&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
 
-Also available on F-Droid: https://f-droid.org/packages/me.timschneeberger.rootlessjamesdsp/
+Also available on F-Droid: https://f-droid.org/packages/app.siphondsp/
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
     alt="Get it on F-Droid"
-    height="80">](https://f-droid.org/packages/me.timschneeberger.rootlessjamesdsp/)
+    height="80">](https://f-droid.org/packages/app.siphondsp/)
 [<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
     alt="Get it on Google Play"
-    height="80">](https://play.google.com/store/apps/details?id=me.timschneeberger.rootlessjamesdsp&utm_source=github&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+    height="80">](https://play.google.com/store/apps/details?id=app.siphondsp&utm_source=github&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
 
 ## Using Root
 
@@ -394,5 +394,5 @@ All the limitations mentioned above are **not relevant** for the magisk/root ver
       <sub><b>714 words</b></sub>
     </td>
   </tr>
-</table><a href="https://crowdin.com/project/rootlessjamesdsp" target="_blank">Translate in Crowdin 🚀</a>
+</table><a href="https://crowdin.com/project/siphondsp" target="_blank">Translate in Crowdin 🚀</a>
 <!-- CROWDIN-CONTRIBUTORS-END -->

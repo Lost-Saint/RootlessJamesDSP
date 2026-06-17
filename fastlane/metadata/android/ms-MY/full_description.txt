@@ -1,8 +1,8 @@
-JamesDSP sebagai enjin pemprosesan global audio tanpa sebarang kebenaran root.
+SiphonDSP sebagai enjin pemprosesan global audio tanpa sebarang kebenaran root.
 
 Aplikasi ini mempunyai keterbatasan yang mungkin akan menyebabkan salah faham kepada sesetengah pihak; sila baca keseluruhan dokumen sebelum menggunakan aplikasi ini. Shizuku(Android 11+) atau ADB melalui komputer adalah diperlukan untuk persediaan awal.
 
-JamesDSP menyokong kesan audio tersebut:
+SiphonDSP menyokong kesan audio tersebut:
 * Penghad kawalan
 * Kawalan gandaan pengeluaran
 * Auto dynamic range compressor
@@ -42,5 +42,5 @@ Additionally, this app integrates directly with AutoEQ. Using AutoEQ integration
 * ...
 
 --- Translation
-Please help us translate this app here: https://crowdin.com/project/rootlessjamesdsp
+Please help us translate this app here: https://crowdin.com/project/siphondsp
 To request a new language that isn't enabled on Crowdin yet, please open an issue here on GitHub and I will turn it on.

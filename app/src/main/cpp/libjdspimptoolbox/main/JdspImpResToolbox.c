@@ -427,7 +427,7 @@ int validateAdvImpParameter(int frameCount, int convMode, jint* advSetPtr, jsize
     return 1;
 }
 
-JNIEXPORT jfloatArray JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpResToolbox_ReadImpulseResponseToFloat
+JNIEXPORT jfloatArray JNICALL Java_app_siphondsp_interop_JdspImpResToolbox_ReadImpulseResponseToFloat
 (JNIEnv *env, jobject obj, jstring path, jint targetSampleRate, jintArray jImpInfo, jint convMode, jintArray jadvParam)
 {
 	const char *mIRFileName = (*env)->GetStringUTFChars(env, path, 0);
@@ -573,7 +573,7 @@ JNIEXPORT jfloatArray JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_J
 	free(pFrameBuffer);
 	return outbuf;
 }
-JNIEXPORT jstring JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpResToolbox_OfflineAudioResample
+JNIEXPORT jstring JNICALL Java_app_siphondsp_interop_JdspImpResToolbox_OfflineAudioResample
 (JNIEnv *env, jobject obj, jstring path, jstring filename, jint targetSampleRate)
 {
 	const char *jnipath = (*env)->GetStringUTFChars(env, path, 0);
@@ -618,7 +618,7 @@ JNIEXPORT jstring JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspI
 }
 double freq[NUMPTS + 2];
 double gain[NUMPTS + 2];
-JNIEXPORT jint JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpResToolbox_ComputeEqResponse
+JNIEXPORT jint JNICALL Java_app_siphondsp_interop_JdspImpResToolbox_ComputeEqResponse
 (JNIEnv *env, jobject obj, jint n, jdoubleArray jfreq, jdoubleArray jgain, jint interpolationMode, jint queryPts, jdoubleArray dispFreq, jfloatArray response)
 {
 	jdouble *javaFreqPtr = (jdouble*) (*env)->GetDoubleArrayElements(env, jfreq, 0);
@@ -653,7 +653,7 @@ JNIEXPORT jint JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpR
 	return 0;
 }
 
-JNIEXPORT void JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpResToolbox_ComputeCompResponse(JNIEnv *env, jobject obj, jdoubleArray jfreq, jdoubleArray jgain, jint queryPts, jdoubleArray dispFreq, jfloatArray response)
+JNIEXPORT void JNICALL Java_app_siphondsp_interop_JdspImpResToolbox_ComputeCompResponse(JNIEnv *env, jobject obj, jdoubleArray jfreq, jdoubleArray jgain, jint queryPts, jdoubleArray dispFreq, jfloatArray response)
 {
     double freqComp[NUMPTS_DRS + 2];
     double gainComp[NUMPTS_DRS + 2];
@@ -681,7 +681,7 @@ JNIEXPORT void JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpR
     (*env)->SetFloatArrayRegion(env, response, 0, queryPts, javaResponsePtr);
 }
 
-JNIEXPORT void JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpResToolbox_ComputeIIREqualizerCplx(JNIEnv *env, jobject obj, jint srate, jint order, jdoubleArray jfreq, jdoubleArray jgain, jint nPts, jdoubleArray jdispFreq, jdoubleArray jcplxRe, jdoubleArray jcplxIm)
+JNIEXPORT void JNICALL Java_app_siphondsp_interop_JdspImpResToolbox_ComputeIIREqualizerCplx(JNIEnv *env, jobject obj, jint srate, jint order, jdoubleArray jfreq, jdoubleArray jgain, jint nPts, jdoubleArray jdispFreq, jdoubleArray jcplxRe, jdoubleArray jcplxIm)
 {
     jdouble *freqs = (jdouble*) (*env)->GetDoubleArrayElements(env, jfreq, 0);
     jdouble *gains = (jdouble*) (*env)->GetDoubleArrayElements(env, jgain, 0);
@@ -714,7 +714,7 @@ JNIEXPORT void JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpR
     (*env)->ReleaseDoubleArrayElements(env, jdispFreq, dispFreq, 0);
 }
 
-JNIEXPORT void JNICALL Java_me_timschneeberger_rootlessjamesdsp_interop_JdspImpResToolbox_ComputeIIREqualizerResponse(JNIEnv *env, jobject obj, jint nPts, jdoubleArray jcplxRe, jdoubleArray jcplxIm, jfloatArray jresponse)
+JNIEXPORT void JNICALL Java_app_siphondsp_interop_JdspImpResToolbox_ComputeIIREqualizerResponse(JNIEnv *env, jobject obj, jint nPts, jdoubleArray jcplxRe, jdoubleArray jcplxIm, jfloatArray jresponse)
 {
     jdouble *cplxRe = (jdouble*) (*env)->GetDoubleArrayElements(env, jcplxRe, 0);
     jdouble *cplxIm = (jdouble*) (*env)->GetDoubleArrayElements(env, jcplxIm, 0);

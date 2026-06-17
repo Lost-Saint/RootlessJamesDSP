@@ -1,7 +1,7 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <me.timschneeberger.rootlessjamesdsp.preference.AppIconPreference
+    <app.siphondsp.preference.AppIconPreference
         app:selectable="false"
         app:iconSpaceReserved="false"
         app:allowDividerBelow="true" />
@@ -25,7 +25,7 @@
         android:icon="@drawable/ic_baseline_github_24dp">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://github.com/thepbone/RootlessJamesDSP" />
+            android:data="https://github.com/thepbone/SiphonDSP" />
     </Preference>
 
     <Preference
@@ -35,7 +35,7 @@
         android:icon="@drawable/ic_baseline_google_play_24dp">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://play.google.com/store/apps/details?id=me.timschneeberger.rootlessjamesdsp" />
+            android:data="https://play.google.com/store/apps/details?id=app.siphondsp" />
     </Preference>
 
     <Preference
@@ -51,7 +51,7 @@
         android:icon="@drawable/ic_twotone_translate_24dp">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://crowdin.com/project/rootlessjamesdsp" />
+            android:data="https://crowdin.com/project/siphondsp" />
     </Preference>
 
     <PreferenceCategory

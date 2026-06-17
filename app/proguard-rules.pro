@@ -26,8 +26,8 @@
 
 -keep class me.timschneeberger.hiddenapi_impl.** { *; }
 
--keep,allowoptimization class me.timschneeberger.rootlessjamesdsp.interop.** { *; }
--keep,allowoptimization class me.timschneeberger.rootlessjamesdsp.fragment.** { *; }
+-keep,allowoptimization class app.siphondsp.interop.** { *; }
+-keep,allowoptimization class app.siphondsp.fragment.** { *; }
 
 -keepclasseswithmembernames class * {
     native <methods>;

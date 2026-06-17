@@ -1,5 +1,13 @@
 import com.google.firebase.crashlytics.buildtools.gradle.CrashlyticsExtension
 import org.gradle.api.plugins.BasePluginExtension
+import java.util.Properties
+
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties().apply {
+    if (keystorePropertiesFile.exists()) {
+        keystorePropertiesFile.inputStream().use(::load)
+    }
+}
 
 plugins {
     id("com.android.application")
@@ -15,7 +23,7 @@ android {
     val SUPPORTED_ABIS = setOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
     compileSdk = AndroidConfig.compileSdk
     project.extensions.configure<BasePluginExtension>("base") {
-        archivesName.set("RootlessJamesDSP-v${AndroidConfig.versionName}")
+        archivesName.set("SiphonDSP-v${AndroidConfig.versionName}")
     }
 
     defaultConfig {
@@ -23,7 +31,7 @@ android {
         versionCode = AndroidConfig.versionCode
         versionName = AndroidConfig.versionName
 
-        manifestPlaceholders["label"] = "RootlessJamesDSP"
+        manifestPlaceholders["label"] = "SiphonDSP"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -45,6 +53,17 @@ android {
         }
     }
 
+    signingConfigs {
+        if (keystorePropertiesFile.exists()) {
+            create("release") {
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         getByName("debug") {
             applicationIdSuffix = ".debug"
@@ -61,7 +80,7 @@ android {
             //proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
             isMinifyEnabled = false
             isShrinkResources = false
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
         }
         create("preview") {
             initWith(getByName("release"))
@@ -89,8 +108,8 @@ android {
         create("rootless") {
             dimension = "version"
 
-            manifestPlaceholders["label"] = "RootlessJamesDSP"
-            applicationId = "me.timschneeberger.rootlessjamesdsp"
+            manifestPlaceholders["label"] = "SiphonDSP"
+            applicationId = "app.siphondsp"
             AndroidConfig.minSdk = 29
             minSdk = AndroidConfig.minSdk
             buildConfigField("boolean", "ROOTLESS", "true")
@@ -99,9 +118,9 @@ android {
         create("root") {
             dimension = "version"
 
-            manifestPlaceholders["label"] = "JamesDSP"
+            manifestPlaceholders["label"] = "SiphonDSP"
             project.extensions.configure<BasePluginExtension>("base") {
-                archivesName.set("JamesDSP-v${AndroidConfig.versionName}-${AndroidConfig.versionCode}")
+                archivesName.set("SiphonDSP-v${AndroidConfig.versionName}-${AndroidConfig.versionCode}")
             }
             applicationId = "james.dsp"
             AndroidConfig.minSdk = 26
@@ -159,7 +178,7 @@ android {
             version = "3.22.1"
         }
     }
-    namespace = "me.timschneeberger.rootlessjamesdsp"
+    namespace = "app.siphondsp"
 }
 
 // Hooks to upload native symbols to crashlytics automatically

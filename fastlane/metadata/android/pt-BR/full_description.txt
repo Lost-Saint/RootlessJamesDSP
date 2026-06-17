@@ -42,5 +42,5 @@ _ Aplicativos não suportados incluem:
 * ...
 
 --- Tradução
-Ajude-nos a traduzir este app aqui: https://crowdin.com/project/rootlessjamesdsp
+Ajude-nos a traduzir este app aqui: https://crowdin.com/project/siphondsp
 Para solicitar um novo idioma que ainda não está habilitado no Crowdin, abra um "issue" aqui no GitHub e vou ativá-lo.

@@ -31,7 +31,7 @@
                 android:textAppearance="?attr/textAppearanceHeadline5" />
 
 
-            <me.timschneeberger.rootlessjamesdsp.view.Card
+            <app.siphondsp.view.Card
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardBackground="?attr/colorErrorContainer"
@@ -39,7 +39,7 @@
                 app:bodyText="@string/load_fail_card"
                 app:cardMargin="8dp" />
 
-            <me.timschneeberger.rootlessjamesdsp.view.Card
+            <app.siphondsp.view.Card
                 android:id="@+id/architectureNotice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                 app:bodyText="@string/load_fail_arch_card"
                 app:cardMargin="8dp"/>
 
-            <me.timschneeberger.rootlessjamesdsp.view.Card
+            <app.siphondsp.view.Card
                 android:id="@+id/rootlessNotice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

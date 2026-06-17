@@ -1,8 +1,8 @@
 {
   "project_info": {
     "project_number": "863489373095",
-    "project_id": "rootlessjamesdsp-preview",
-    "storage_bucket": "rootlessjamesdsp-preview.appspot.com"
+    "project_id": "siphondsp-preview",
+    "storage_bucket": "siphondsp-preview.appspot.com"
   },
   "client": [
     {
@@ -38,7 +38,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:863489373095:android:b838eeaa29d098d03cbc82",
         "android_client_info": {
-          "package_name": "me.timschneeberger.rootlessjamesdsp"
+          "package_name": "app.siphondsp"
         }
       },
       "oauth_client": [

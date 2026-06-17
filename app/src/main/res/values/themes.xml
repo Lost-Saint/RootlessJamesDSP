@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.RootlessJamesDSP" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.SiphonDSP" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Disallow "Force dark theme" -->
         <item name="android:forceDarkAllowed" tools:targetApi="Q" tools:ignore="ObsoleteSdkInt">false</item>
 
@@ -12,7 +12,7 @@
 
         <item name="materialSwitchStyle">@style/Widget.Material3.CompoundButton.MaterialSwitch</item>
         <item name="alertDialogTheme">@style/AppTheme.AlertDialogTheme</item>
-        <item name="materialCardViewStyle">@style/Theme.RootlessJamesDSP.CardView</item>
+        <item name="materialCardViewStyle">@style/Theme.SiphonDSP.CardView</item>
         <item name="cardCornerRadius">@dimen/corner_radius</item>
     </style>
 
@@ -25,7 +25,7 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
-    <style name="Base.Theme.RootlessJamesDSP.Dialog" parent="Theme.Material3.DayNight.Dialog">
+    <style name="Base.Theme.SiphonDSP.Dialog" parent="Theme.Material3.DayNight.Dialog">
         <!-- Disallow "Force dark theme" -->
         <item name="android:forceDarkAllowed" tools:targetApi="Q" tools:ignore="ObsoleteSdkInt">false</item>
 
@@ -46,29 +46,29 @@
     </style>
 
 
-    <style name="Theme.RootlessJamesDSP" parent="Base.Theme.RootlessJamesDSP" />
-    <style name="Theme.RootlessJamesDSP.Dialog" parent="Base.Theme.RootlessJamesDSP.Dialog" />
+    <style name="Theme.SiphonDSP" parent="Base.Theme.SiphonDSP" />
+    <style name="Theme.SiphonDSP.Dialog" parent="Base.Theme.SiphonDSP.Dialog" />
 
-    <style name="ThemeOverlay.RootlessJamesDSP.Amoled" parent="" />
+    <style name="ThemeOverlay.SiphonDSP.Amoled" parent="" />
 
     <style name="AppTheme.AlertDialogTheme" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="dialogCornerRadius">28dp</item>
         <item name="colorBackgroundFloating">?attr/colorSurface</item>
     </style>
 
-    <style name="Theme.RootlessJamesDSP.SearchButton" parent="Widget.AppCompat.ImageButton">
+    <style name="Theme.SiphonDSP.SearchButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:minWidth" tools:ignore="PrivateResource">@dimen/mtrl_min_touch_target_size</item>
         <item name="android:minHeight" tools:ignore="PrivateResource">@dimen/mtrl_min_touch_target_size</item>
         <item name="android:background">?attr/actionBarItemBackground</item>
     </style>
 
-    <style name="Theme.RootlessJamesDSP.CardView" parent="Widget.Material3.CardView.Elevated" />
+    <style name="Theme.SiphonDSP.CardView" parent="Widget.Material3.CardView.Elevated" />
 
     <!-- === Custom themes taken from Tachiyomi: https://github.com/tachiyomiorg/tachiyomi === -->
-    <style name="Theme.RootlessJamesDSP.Monet" />
+    <style name="Theme.SiphonDSP.Monet" />
 
     <!--== Green Apple Theme ==-->
-    <style name="Theme.RootlessJamesDSP.GreenApple">
+    <style name="Theme.SiphonDSP.GreenApple">
         <!-- Theme Colors -->
         <item name="colorPrimary">@color/greenapple_primary</item>
         <item name="colorOnPrimary">@color/greenapple_onPrimary</item>
@@ -95,7 +95,7 @@
     </style>
 
     <!--== Strawberry Daiquiri Theme ==-->
-    <style name="Theme.RootlessJamesDSP.StrawberryDaiquiri">
+    <style name="Theme.SiphonDSP.StrawberryDaiquiri">
         <!-- Theme Colors -->
         <item name="colorPrimary">@color/strawberry_primary</item>
         <item name="colorOnPrimary">@color/strawberry_onPrimary</item>
@@ -122,7 +122,7 @@
     </style>
 
     <!--== Honey Theme ==-->
-    <style name="Theme.RootlessJamesDSP.Honey">
+    <style name="Theme.SiphonDSP.Honey">
         <!-- Theme Colors -->
         <item name="colorPrimary">@color/honey_primary</item>
         <item name="colorOnPrimary">@color/honey_onPrimary</item>
@@ -150,7 +150,7 @@
     </style>
 
     <!--== Teal & Turquoise Theme ==-->
-    <style name="Theme.RootlessJamesDSP.TealTurquoise">
+    <style name="Theme.SiphonDSP.TealTurquoise">
         <!-- Theme Colors -->
         <item name="colorPrimary">@color/tealturquoise_primary</item>
         <item name="colorOnPrimary">@color/tealturquoise_onPrimary</item>
@@ -180,7 +180,7 @@
     </style>
 
     <!--== Yin & Yang Theme ==-->
-    <style name="Theme.RootlessJamesDSP.YinYang">
+    <style name="Theme.SiphonDSP.YinYang">
         <!-- Theme Colors -->
         <item name="colorPrimary">@color/yinyang_primary</item>
         <item name="colorOnPrimary">@color/yinyang_onPrimary</item>
@@ -207,7 +207,7 @@
     </style>
 
     <!--== Yotsuba Theme ==-->
-    <style name="Theme.RootlessJamesDSP.Yotsuba">
+    <style name="Theme.SiphonDSP.Yotsuba">
         <!-- Theme Colors -->
         <item name="colorPrimary">@color/yotsuba_primary</item>
         <item name="colorOnPrimary">@color/yotsuba_onPrimary</item>
@@ -234,7 +234,7 @@
     </style>
 
     <!--== Tidal Wave Theme ==-->
-    <style name="Theme.RootlessJamesDSP.TidalWave">
+    <style name="Theme.SiphonDSP.TidalWave">
         <!-- Theme Colors -->
         <item name="colorPrimary">@color/tidalwave_primary</item>
         <item name="colorOnPrimary">@color/tidalwave_onPrimary</item>
