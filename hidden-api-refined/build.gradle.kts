@@ -1,6 +1,5 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
     id("dev.rikka.tools.refine") version AndroidConfig.rikkaRefineVersion
 }
 
@@ -27,7 +26,7 @@ android {
 
 dependencies {
     // Kotlin
-    implementation("androidx.core:core-ktx:1.15.0")
+    implementation("androidx.core:core-ktx:1.19.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${AndroidConfig.kotlinVersion}")
 
     // Refine

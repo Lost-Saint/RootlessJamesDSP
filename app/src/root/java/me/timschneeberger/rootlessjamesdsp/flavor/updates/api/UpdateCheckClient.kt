@@ -1,7 +1,7 @@
 package me.timschneeberger.rootlessjamesdsp.flavor.updates.api
 
 import android.content.Context
-import com.pluto.plugins.network.PlutoInterceptor
+import com.pluto.plugins.network.okhttp.PlutoOkhttpInterceptor
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -28,7 +28,7 @@ class UpdateCheckClient(val context: Context, callTimeout: Long = 0): KoinCompon
     private val http = OkHttpClient
         .Builder()
         .callTimeout(callTimeout, TimeUnit.SECONDS)
-        .addInterceptor(PlutoInterceptor())
+        .addInterceptor(PlutoOkhttpInterceptor)
         .addInterceptor(UserAgentInterceptor("RootlessJamesDSP v${BuildConfig.VERSION_NAME}"))
         .build()
 

@@ -19,7 +19,7 @@ import com.pluto.plugins.network.PlutoNetworkPlugin
 import com.pluto.plugins.preferences.PlutoSharePreferencesPlugin
 import com.pluto.plugins.rooms.db.PlutoRoomsDBWatcher
 import com.pluto.plugins.rooms.db.PlutoRoomsDatabasePlugin
-import fr.bipi.tressence.file.FileLoggerTree
+import fr.bipi.treessence.file.FileLoggerTree
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import me.timschneeberger.rootlessjamesdsp.flavor.CrashlyticsImpl
@@ -273,11 +273,11 @@ open class MainApplication : Application(), SharedPreferences.OnSharedPreference
         )
 
         Pluto.Installer(this)
-            .addPlugin(PlutoNetworkPlugin("network"))
-            .addPlugin(PlutoExceptionsPlugin("exceptions"))
-            .addPlugin(PlutoLoggerPlugin("logger"))
-            .addPlugin(PlutoSharePreferencesPlugin("sharedPref"))
-            .addPlugin(PlutoRoomsDatabasePlugin("rooms-db"))
+            .addPlugin(PlutoNetworkPlugin())
+            .addPlugin(PlutoExceptionsPlugin())
+            .addPlugin(PlutoLoggerPlugin())
+            .addPlugin(PlutoSharePreferencesPlugin())
+            .addPlugin(PlutoRoomsDatabasePlugin())
             .install()
         Pluto.showNotch(true)
 
