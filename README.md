@@ -1,4 +1,4 @@
-# RootlessJamesDSP
+# SiphonDSP
 
 <p align="center">
   <img alt="RootlessJamesDSP icon" width="96" src="img/icons/web/icon-192.png">
@@ -14,7 +14,7 @@
   </a>
 </p>
 
-RootlessJamesDSP is an unofficial fork of [SiphonDSP](https://github.com/ThePBone/SiphonDSP) focused on running the JamesDSP engine on non-rooted Android devices. It uses Android internal audio capture to route app audio through [libjamesdsp](https://github.com/james34602/JamesDSPManager), so it can provide real DSP effects without depending only on Android's built-in `audiofx` effects.
+It uses Android internal audio capture to route app audio through [libjamesdsp](https://github.com/james34602/JamesDSPManager), so it can provide real DSP effects without depending only on Android's built-in `audiofx` effects.
 
 This fork is not the upstream Google Play or F-Droid build. Install builds from this repository only if you trust this fork and understand the rootless capture limitations below.
 
@@ -33,21 +33,21 @@ app.siphondsp
 
 ## Features
 
-* System-wide JamesDSP processing without root
-* Shizuku or ADB based setup flow
-* Presets, backup/restore, IRS/DDC/Liveprog support
-* Graphic EQ, parametric EQ, convolver, bass, compressor, reverb, crossfeed, tube, stereo wide, and other JamesDSP modules
-* Android 15+ compatibility path for media projection restrictions
+- System-wide JamesDSP processing without root
+- Shizuku or ADB based setup flow
+- Presets, backup/restore, IRS/DDC/Liveprog support
+- Graphic EQ, parametric EQ, convolver, bass, compressor, reverb, crossfeed, tube, stereo wide, and other JamesDSP modules
+- Android 15+ compatibility path for media projection restrictions
 
 ## Limitations
 
 Rootless processing is based on Android internal audio capture. That means:
 
-* Apps that block internal audio capture remain unprocessed, such as stock Spotify, Google Chrome, and SoundCloud.
-* Some audio effect apps cannot coexist with it, especially apps using Android's `DynamicsProcessing` API.
-* Audio latency is higher than a native/root audio effect.
-* Hardware-accelerated playback or fast tracks can interfere with routing on some devices.
-* Android 15 and newer may require disabling screen share protection in Developer options, or granting the required projection permission through Shizuku/ADB when prompted by the app.
+- Apps that block internal audio capture remain unprocessed, such as stock Spotify, Google Chrome, and SoundCloud.
+- Some audio effect apps cannot coexist with it, especially apps using Android's `DynamicsProcessing` API.
+- Audio latency is higher than a native/root audio effect.
+- Hardware-accelerated playback or fast tracks can interfere with routing on some devices.
+- Android 15 and newer may require disabling screen share protection in Developer options, or granting the required projection permission through Shizuku/ADB when prompted by the app.
 
 Apps commonly reported to work include YouTube, YouTube Music, Amazon Music, Deezer, Poweramp, Substreamer, Twitch, Apple Music, Vinyl Music Player, and patched Spotify/ReVanced builds.
 
@@ -67,9 +67,9 @@ The same universal patch can sometimes help other apps that block capture, but i
 
 Requirements:
 
-* JDK 17
-* Android SDK with the compile SDK used by the project
-* Android NDK and CMake, installed through Android Studio or `sdkmanager`
+- JDK 17
+- Android SDK with the compile SDK used by the project
+- Android NDK and CMake, installed through Android Studio or `sdkmanager`
 
 Useful build commands:
 
@@ -98,18 +98,18 @@ The main focus of this fork is the rootless build. A rooted/Magisk-compatible fl
 
 This fork is based on SiphonDSP by Tim Schneeberger:
 
-* Upstream repository: <https://github.com/ThePBone/SiphonDSP>
-* Original rootless implementation: SiphonDSP
-* DSP engine: [JamesDSP / libjamesdsp](https://github.com/james34602/JamesDSPManager) by [James Fung](https://github.com/james34602)
+- Upstream repository: <https://github.com/timschneeb/RootlessJamesDSP>
+- Original rootless implementation: SiphonDSP
+- DSP engine: [JamesDSP / libjamesdsp](https://github.com/james34602/JamesDSPManager) by [James Fung](https://github.com/james34602)
 
 Please report fork-specific issues in this repository. For upstream SiphonDSP behavior, check the upstream project first.
 
 ## Credits
 
-* [SiphonDSP](https://github.com/ThePBone/SiphonDSP) for the Android app, rootless routing implementation, UI foundation, and build structure
-* [JamesDSP](https://github.com/james34602/JamesDSPManager) for the DSP engine
-* Tachiyomi for the theming and backup system foundations used upstream
-* SiphonDSP translators and contributors
+- [RootlessJamesDSP](https://github.com/timschneeb/RootlessJamesDSP) for the Android app, rootless routing implementation, UI foundation, and build structure
+- [JamesDSP](https://github.com/james34602/JamesDSPManager) for the DSP engine
+- Tachiyomi for the theming and backup system foundations used upstream
+- RootlessJamesDSP translators and contributors
 
 ## License
 
