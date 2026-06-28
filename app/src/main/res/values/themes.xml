@@ -62,7 +62,9 @@
         <item name="android:background">?attr/actionBarItemBackground</item>
     </style>
 
-    <style name="Theme.SiphonDSP.CardView" parent="Widget.Material3.CardView.Elevated" />
+    <style name="Theme.SiphonDSP.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">?attr/colorSecondaryContainer</item>
+    </style>
 
     <!-- === Custom themes taken from Tachiyomi: https://github.com/tachiyomiorg/tachiyomi === -->
     <style name="Theme.SiphonDSP.Monet" />
