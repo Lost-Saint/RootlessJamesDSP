@@ -27,7 +27,7 @@ class AutoEqClient(val context: Context, callTimeout: Long = 10, customBaseUrl: 
         .Builder()
         .callTimeout(callTimeout, TimeUnit.SECONDS)
         .addInterceptor(PlutoOkhttpInterceptor)
-        .addInterceptor(UserAgentInterceptor("SiphonDSP v${BuildConfig.VERSION_NAME}"))
+        .addInterceptor(UserAgentInterceptor("RootlessJamesDSP v${BuildConfig.VERSION_NAME}"))
         .build()
 
     private val retrofit: Retrofit
